@@ -16,7 +16,7 @@ jwt = JWTManager(app)
 socketio = SocketIO(app,cors_allowed_origins="*")
 
 def get_connect():
-  return sqlite3.connect(os.getenv("DATABASE_URL"))
+  return sqlite3.connect("chat.db")
 
 def create_table():
   conn = get_connect()
